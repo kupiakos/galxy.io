@@ -1,0 +1,39 @@
+{
+  "name": "galxy.io",
+  "version": "0.0.1",
+  "description": "A gravity-based casual real-time MMO game",
+  "scripts": {
+    "start": "npm run serve",
+    "build": "npm run build-ts && npm run tslint",
+    "serve": "node dist/server.js",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "test": "jest --forceExit --coverage --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kupiakos/galxy.io.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kupiakos/galxy.io/issues"
+  },
+  "homepage": "https://github.com/kupiakos/galxy.io#readme",
+  "dependencies": {
+    "errorhandler": "^1.5.0",
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "@types/errorhandler": "0.0.32",
+    "@types/express": "^4.11.1",
+    "@types/jest": "^22.1.2",
+    "@types/socket.io": "^1.4.31",
+    "jest": "^22.2.2",
+    "ts-jest": "^22.0.4",
+    "ts-node": "^4.1.0",
+    "typescript": "^2.7.1"
+  }
+}
