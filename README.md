@@ -5,6 +5,8 @@ See the [wiki](https://github.com/kupiakos/galxy.io/wiki) for more details.
 
 ## Installation
 
+While inside of the workspace directory, run the following:
+
 ```sh
 npm install -g typescript tslint  # sudo npm on Linux
 npm install
