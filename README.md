@@ -8,7 +8,7 @@ See the [wiki](https://github.com/kupiakos/galxy.io/wiki) for more details.
 While inside of the workspace directory, run the following:
 
 ```sh
-npm install -g typescript tslint  # sudo npm on Linux
+npm install -g typescript tslint webpack webpack-cli  # sudo npm on Linux
 npm install
 ```
 
