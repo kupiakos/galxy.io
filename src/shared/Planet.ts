@@ -64,6 +64,11 @@ export class Planet {
         let force = GravitationConstant * (this.mass * planet.mass) / (distance * distance);
         return force;
     }
+    
+    public setParent(parent: Planet)
+    {
+        this.parentBody = parent;
+    }
 
     public sphereOfInfluence() : number
     {
