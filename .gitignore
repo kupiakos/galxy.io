@@ -2,6 +2,8 @@ dist/**/*
 .vscode
 !launch.json
 
+.DS_Store
+
 # Logs
 logs
 *.log
