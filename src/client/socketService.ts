@@ -1,9 +1,9 @@
 
 import { TypedClientSocket, SocketAPI } from "shared/socketApi";
-import { ChatApi, User, Message } from "shared/chatApi";
+import { ChatApi, User, GameAPI, Message } from "shared/chatApi";
 
 import * as io from "socket.io-client";
-import {Observable} from "rxjs/Observable";
+import { Observable } from "rxjs/Observable";
 
 interface SocketEvent<APIDef extends SocketAPI, M extends keyof APIDef> {
     data: APIDef[M]["req"]
