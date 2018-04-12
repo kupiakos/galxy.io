@@ -15,3 +15,9 @@ export type ChatApi = StandardSocketAPI & {
     getUsers: { req: void, res: User[] }
     userDisconnected: { req: User }
 }
+
+export type GameAPI = StandardSocketAPI & {
+    userDisconnected: { req: User }
+    getUsers: { req: void, res: User[] }
+    newUser: { req: User, res: boolean }
+}

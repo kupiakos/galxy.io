@@ -8,11 +8,11 @@ export class Planet {
     parentBody: Planet;
     mass: number;
     position: [number, number];
-    velocity: [number, number]; 
+    velocity: [number, number];
 
     public update(elapsedTime: number): void
     {
-        this.accleratePlanetByGravity(elapsedTime);
+        this.acceleratePlanetByGravity(elapsedTime);
         this.updatePosition(elapsedTime);
     }
 
@@ -26,7 +26,7 @@ export class Planet {
         this.velocity = [this.velocity[0] + force[0], this.velocity[1] + force[1]];
     }
 
-    private accleratePlanetByGravity(elapsedTime: number) : void
+    private acceleratePlanetByGravity(elapsedTime: number) : void
     {
         let gravityForce = elapsedTime *
             this.parentBody.getGravitationForce(this, this.getDistanceToParent());
@@ -72,7 +72,7 @@ export class Planet {
 
     public sphereOfInfluence() : number
     {
-        //Minnimum force to still be in sphere of influence.
+        // Minimum force to still be in sphere of influence.
         let force = 0.005;
 
         //We'll ignore the mass of children in this to keep a constant sphere of influence size
