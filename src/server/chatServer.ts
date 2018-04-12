@@ -12,7 +12,8 @@ export default class ChatServer {
 
     constructor(private server: Server) {
         this.io = socketIo(server);
-        this.io.on("connection", this.onConnect);
+        this.users = new Set();
+        this.io.on("connection", (sock) => this.onConnect(sock));
     }
 
     private onConnect(sock: TypedSocket<ChatApi>) {

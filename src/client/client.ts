@@ -9,14 +9,15 @@ window.addEventListener("DOMContentLoaded", function() {
     document.getElementById("connecting").remove();
     document.getElementById("login").style.display = "block";
     document.getElementById("login-button").addEventListener(
-        "onclick", login
+        "click", login
     );
     document.getElementById("message").addEventListener(
-        "onkeyup", sendMessage
+        "keyup", sendMessage
     );
 }, false);
 
 function login() {
+    console.log("login");
     username = (<HTMLInputElement>document.getElementById("username")).value;
     client.sock.emit("newUser", {username: username}, success => {
         document.getElementById("login").remove();
