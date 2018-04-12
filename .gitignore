@@ -1,5 +1,6 @@
 dist/**/*
 .vscode
+!launch.json
 
 # Logs
 logs
